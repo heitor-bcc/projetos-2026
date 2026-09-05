@@ -1,0 +1,18 @@
+prova1 = float(input("digite a nota 1: "))
+
+peso1 = float(input("digite a peso 1: "))
+
+
+prova2 = float(input("digite a nota 2: "))
+
+peso2 = float(input("digite a peso 2: "))
+
+
+prova3 = float(input("digite a nota 3: "))
+
+peso3 = float(input("digite a peso 3: "))
+
+
+
+mp = (prova1*peso1 + prova2*peso2 + prova3*peso3)/(peso1+peso2+peso3)
+print (f"a media ponderada é {mp:.2f}")
