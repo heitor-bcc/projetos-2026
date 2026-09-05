@@ -1,0 +1,38 @@
+from datetime import date, timedelta, datetime
+
+hoje = date.today()
+
+hoje_formatado = hoje.strftime("%d/%m/%Y")
+
+cor_uniforme = input("Digite a cor do uniforme colorido ou branco: ")
+
+data_troca = input("Digite a data da última troca (ex: 15/04/2026): ")
+
+
+data_convertida = datetime.strptime(data_troca, "%d/%m/%Y").date()
+
+
+prazo_de_troca = timedelta(days=730)
+
+prazo_minimo_de_troca = 640
+
+prazo_de_troca2 = 545
+
+prazo_minimo_de_troca2 = 455
+
+dias_passados = (hoje - data_convertida).days
+if cor_uniforme == "branco" and dias_passados >= prazo_de_troca2:
+    print("O funcionário do É elegível para a troca!")
+
+elif cor_uniforme == "branco" and dias_passados >= prazo_minimo_de_troca2:
+    print("O funcionário do DRT É elegível.")
+else:
+  print("o colaborador não é elegibvel")
+
+if dias_passados >= 730:
+    print("O funcionário É elegível para a troca!")
+elif dias_passados >= prazo_minimo_de_troca:
+    print("O colaborador é elegível.")
+else:
+    Faltam = 730 - dias_passados
+    print("O colaborador NÃO é elegível.")
