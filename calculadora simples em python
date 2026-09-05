@@ -1,0 +1,43 @@
+def adicao(numero1, numero2):
+   resultado_soma = numero1+numero2
+   return resultado_soma
+
+def subtração (numero1, numero2):
+   resultado_sub = numero1-numero2
+   return resultado_sub
+
+def mutiplicação (numero1, numero2):
+  return numero1*numero2
+
+def div(numero1, numero2):
+  if numero2 == 0:
+    return "impossivel realizar essa operação"
+  else: return numero1/numero2
+
+
+print("escolha uma opção de 1 a 4")
+print("1 adição")
+print("2 subtração")
+print("3 mutiplicação")
+print("4 divisão")
+
+while True:
+    operação = (int(input("digite a operação: ")))
+
+    if operação in [1,2,3,4]:
+        numero1=(int(input("digite o primeiro numero: ")))
+        numero2=(int(input("digite o segundo numero: ")))
+        break
+    else:
+        print("Opção inválida. Por favor, escolha uma operação de 1 a 4.")
+
+
+
+if operação == 1:
+    print(f"o resultado é {adicao(numero1, numero2)}")
+elif operação == 2:
+     print(f"o resultado é {subtração(numero1, numero2)}")
+elif operação == 3:
+    print(f"o resultado é {mutiplicação(numero1, numero2)}")
+elif operação == 4:
+    print(f"o resultado é {div(numero1, numero2)}")
